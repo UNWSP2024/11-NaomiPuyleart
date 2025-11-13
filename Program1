@@ -1,0 +1,20 @@
+# Naomi Puyleart
+# 11/12/25
+# Program #1:
+# Create a GUI window that displays your favorite saying.
+
+import tkinter
+
+class FavoriteGUI:
+    def __init__(self):
+        self.window = tkinter.Tk()
+
+        self.window.title("Favorite Saying")
+
+        self.label = tkinter.Label(self.window, text="Jesus, I trust in You")
+        self.label.pack()
+
+        tkinter.mainloop()
+
+if __name__ == "__main__":
+    favoriteGUI = FavoriteGUI()
