@@ -1,0 +1,35 @@
+# Naomi Puyleart
+# 11/12/25
+# Program #2:
+# Write a GUI program that displays your name and address
+# when a "Show Info" button is clicked.
+# There should also be a "Quit" button which exists the GUI.
+
+import tkinter
+import tkinter.messagebox
+
+class InfoGUI:
+    def __init__(self):
+        self.window = tkinter.Tk()
+
+        self.window.title("Information")
+
+        # Info button
+        self.info_button = tkinter.Button(self.window, text = "Show Info",
+                                          command = self.show_info)
+
+        # Quit button
+        self.quit_button = tkinter.Button(self.window, text = "Quit",
+                                          command = self.window.destroy)
+
+        # Pack
+        self.info_button.pack()
+        self.quit_button.pack()
+
+        tkinter.mainloop()
+
+    def show_info(self):
+        tkinter.messagebox.showinfo("Info", "Name: Naomi Puyleart\nAddress: 123 Main Street")
+
+if __name__ == "__main__":
+    informationGUI = InfoGUI()
